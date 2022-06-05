@@ -4,6 +4,8 @@ import random
 from typing import Tuple
 from random import randint
 
+import sys
+
 import unix_fonts
 
 from PIL import (
@@ -18,7 +20,7 @@ SIZE = (400, 400)
 CENTER = (SIZE[0] / 2, SIZE[1] / 2)
 MIN_AVOIDANCE = 32
 
-items = ["Rust", "Firefox Research"]
+items = sys.argv[1:]
 
 
 def get_center(a: Tuple[int, int], b: Tuple[int, int]) -> Tuple[int, int]:
